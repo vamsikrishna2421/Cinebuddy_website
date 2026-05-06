@@ -1,4 +1,5 @@
 const requestForm = document.querySelector("#request");
+const feedbackForm = document.querySelector("#feedbackForm");
 const quickWhatsApp = document.querySelector("#quickWhatsApp");
 const movieInput = document.querySelector("#movieInput");
 const showtimeMovieName = document.querySelector("#showtimeMovieName");
@@ -10,7 +11,7 @@ const showtimeFrame = document.querySelector("#showtimeFrame");
 const activeTheatreName = document.querySelector("#activeTheatreName");
 let feedbackIndex = 0;
 let feedbackTimer;
-const feedbackDuration = 5200;
+const feedbackDuration = 10400;
 
 const buildMessage = (data) => {
   const lines = [
@@ -41,6 +42,28 @@ requestForm?.addEventListener("submit", (event) => {
 
   const data = new FormData(requestForm);
   const message = encodeURIComponent(buildMessage(data));
+  window.open(`https://wa.me/${cineBuddyWhatsApp}?text=${message}`, "_blank", "noopener,noreferrer");
+});
+
+feedbackForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  if (!feedbackForm.reportValidity()) {
+    return;
+  }
+
+  const data = new FormData(feedbackForm);
+  const name = data.get("name")?.trim() || "CineBuddy customer";
+  const feedback = data.get("feedback")?.trim();
+  const message = encodeURIComponent(
+    [
+      "Hi CineBuddy USA, I want to share feedback.",
+      "",
+      `Name: ${name}`,
+      `Feedback: ${feedback}`,
+    ].join("\n")
+  );
+
   window.open(`https://wa.me/${cineBuddyWhatsApp}?text=${message}`, "_blank", "noopener,noreferrer");
 });
 
