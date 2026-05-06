@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CineBuddy USA | Discounted Regal Movie Ticket Requests</title>
+    <meta
+      name="description"
+      content="CineBuddy USA helps movie lovers request discounted Regal movie tickets through a simple website or WhatsApp request."
+    >
+    <link rel="preload" href="assets/cinema-hero.png" as="image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="CineBuddy USA home">
+        <span class="brand-mark">CB</span>
+        <span>
+          <strong>CineBuddy</strong>
+          <small>USA</small>
+        </span>
+      </a>
+      <nav>
+        <a href="#how-it-works">How it works</a>
+        <a href="#deals">Deals</a>
+        <a href="#indian-releases">Indian releases</a>
+        <a href="#community">Community</a>
+        <a href="#feedback">Feedback</a>
+        <a class="nav-action" href="#request">Request tickets</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" role="img" aria-label="Friends checking movie tickets in a cinema lobby"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-effects" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Discounted Regal ticket requests in the USA</p>
+            <h1 id="hero-title">CineBuddy USA</h1>
+            <p class="hero-text">
+              Tell us your movie, Regal theater, date, showtime, and ticket count. The CineBuddy team checks availability,
+              confirms the best price, and sends your ticket details after booking.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#request">Start a request</a>
+              <a class="button ghost" id="quickWhatsApp" href="https://wa.me/17743141427?text=Hi%20CineBuddy%20USA%2C%20I%20want%20to%20request%20discounted%20Regal%20movie%20tickets." target="_blank" rel="noreferrer">WhatsApp</a>
+            </div>
+          </div>
+
+          <form class="request-panel" id="request" aria-label="Movie ticket request form">
+            <div class="panel-heading">
+              <p class="eyebrow">Ticket request</p>
+              <h2>Send the details</h2>
+            </div>
+            <label>
+              Movie
+              <input name="movie" type="text" placeholder="Movie name" required>
+            </label>
+            <label>
+              Regal theater
+              <input name="theater" type="text" placeholder="Regal location or ZIP code" required>
+            </label>
+            <div class="field-grid">
+              <label>
+                Date
+                <input name="date" type="date" required>
+              </label>
+              <label>
+                Showtime
+                <input name="time" type="time" required>
+              </label>
+            </div>
+            <div class="field-grid">
+              <label>
+                Tickets
+                <input name="tickets" type="number" min="1" max="10" value="2" required>
+              </label>
+              <label>
+                Contact
+                <input name="contact" type="text" placeholder="Phone or email" required>
+              </label>
+            </div>
+            <label>
+              Notes
+              <textarea name="notes" rows="3" placeholder="Seat preference, format, or anything important"></textarea>
+            </label>
+            <button class="button submit" type="submit">Send request by WhatsApp</button>
+            <p class="form-note">Requests are manually reviewed before final price confirmation.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Service highlights">
+        <div>
+          <strong>Regal focused</strong>
+          <span>Built for U.S. moviegoers looking for Regal ticket help.</span>
+        </div>
+        <div>
+          <strong>Manual confirmation</strong>
+          <span>Availability and pricing are reviewed before booking.</span>
+        </div>
+        <div>
+          <strong>Website or WhatsApp</strong>
+          <span>Request tickets through whichever path feels easiest.</span>
+        </div>
+      </section>
+
+      <section class="cinema-stats reveal-on-scroll" aria-label="CineBuddy service stats">
+        <div class="stats-intro">
+          <p class="eyebrow">Why people use CineBuddy</p>
+          <h2>Less checkout stress, more movie plans.</h2>
+        </div>
+        <div class="stat-grid">
+          <article>
+            <strong data-count-to="50">0</strong><span>%</span>
+            <p>Typical pricing target from the final Regal checkout amount.</p>
+          </article>
+          <article>
+            <strong data-count-to="4">0</strong><span> steps</span>
+            <p>Share movie, theater, showtime, and ticket count.</p>
+          </article>
+          <article>
+            <strong data-count-to="1">0</strong><span> group</span>
+            <p>Follow CineBuddy updates, reviews, and ticket deal alerts.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section reveal-on-scroll" id="how-it-works">
+        <div class="section-copy">
+          <p class="eyebrow">Simple process</p>
+          <h2>Request first, confirm next.</h2>
+          <p>
+            CineBuddy is a request-based service. It is not a fully automated ticket booking platform, so every order gets
+            a human review before payment and ticket details are finalized.
+          </p>
+        </div>
+        <div class="steps">
+          <article>
+            <span>1</span>
+            <h3>Share your show</h3>
+            <p>Movie, Regal theater, date, showtime, ticket count, and contact details.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>We check the deal</h3>
+            <p>The team reviews ticket price, availability, format, and request notes.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Get ticket details</h3>
+            <p>After confirmation and booking, CineBuddy sends the ticket information.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-section reveal-on-scroll" id="deals">
+        <div>
+          <p class="eyebrow">Simple pricing example</p>
+          <h2>About half of the final checkout price.</h2>
+        </div>
+        <div class="pricing-example">
+          <p>
+            CineBuddy looks at the final ticket price shown at checkout, including booking fees and taxes. The discounted
+            price is usually calculated as half of that final amount, then rounded up to the nearest dollar.
+          </p>
+          <div class="price-examples" aria-label="Example CineBuddy ticket pricing">
+            <article class="price-card featured-price">
+              <span>Example</span>
+              <div class="sale-price">
+                <del>$18.56</del>
+                <strong>$10</strong>
+              </div>
+              <p>$18.56 ÷ 2 = $9.28, then rounded up to <b>$10</b>.</p>
+            </article>
+            <article class="mini-price-card">
+              <del>$15.20</del>
+              <strong>$8</strong>
+              <p>$15.20 ÷ 2 = $7.60, rounded up.</p>
+            </article>
+            <article class="mini-price-card">
+              <del>$21.40</del>
+              <strong>$11</strong>
+              <p>$21.40 ÷ 2 = $10.70, rounded up.</p>
+            </article>
+            <article class="mini-price-card">
+              <del>$24.99</del>
+              <strong>$13</strong>
+              <p>$24.99 ÷ 2 = $12.50, rounded up.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="releases-section reveal-on-scroll" id="indian-releases">
+        <div class="section-copy">
+          <p class="eyebrow">Latest Regal Indian releases</p>
+          <h2>Ask CineBuddy about these current titles.</h2>
+          <p>
+            Availability changes by Regal theater and showtime. Share the movie and location in your request, and CineBuddy
+            will check pricing and seats before confirming.
+          </p>
+        </div>
+        <div class="release-grid" aria-label="Indian-language Regal releases for April 30 to May 6, 2026">
+          <article class="release-card gujarati">
+            <img class="poster" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/245577/dhabkaaro-1080x1600.jpg" alt="Dhabkaaro movie poster" loading="lazy">
+            <div class="release-details">
+              <span>Gujarati</span>
+              <h3>Dhabkaaro</h3>
+              <p>Listed across 4 Regal theaters for the week of Apr 30-May 6, 2026.</p>
+            </div>
+          </article>
+          <article class="release-card hindi">
+            <img class="poster" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/Ek_Din.jpg/250px-Ek_Din.jpg" alt="Ek Din movie poster" loading="lazy">
+            <div class="release-details">
+              <span>Hindi</span>
+              <h3>Ek Din</h3>
+              <p>Listed across 11 Regal theaters for the week of Apr 30-May 6, 2026.</p>
+            </div>
+          </article>
+          <article class="release-card telugu">
+            <img class="poster" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/245487/GPS-Poster-27x40.jpg" alt="Gaaya Padda Simham movie poster" loading="lazy">
+            <div class="release-details">
+              <span>Telugu</span>
+              <h3>Gaaya Padda Simham</h3>
+              <p>Listed across 41 Regal theaters for the week of Apr 30-May 6, 2026.</p>
+            </div>
+          </article>
+          <article class="release-card telugu-alt">
+            <img class="poster" src="https://images.filmibeat.com/ph-big/2026/01/jetlee1767610501_0.jpeg" alt="Jetlee movie poster" loading="lazy">
+            <div class="release-details">
+              <span>Telugu</span>
+              <h3>Jetlee</h3>
+              <p>Listed across 54 Regal theaters for the week of Apr 30-May 6, 2026.</p>
+            </div>
+          </article>
+          <article class="release-card tamil">
+            <img class="poster" src="https://images.filmibeat.com/ph-big/2026/04/kara1777291105_0.jpeg" alt="Kara movie poster" loading="lazy">
+            <div class="release-details">
+              <span>Tamil</span>
+              <h3>Kara</h3>
+              <p>Listed across 34 Regal theaters for the week of Apr 30-May 6, 2026.</p>
+            </div>
+          </article>
+          <article class="release-card malayalam">
+            <img class="poster" src="https://images.filmibeat.com/img/2026/02/patriot-second-look-1772129061.jpg" alt="Patriot movie poster" loading="lazy">
+            <div class="release-details">
+              <span>Malayalam</span>
+              <h3>Patriot</h3>
+              <p>Listed across 27 Regal theaters for the week of Apr 30-May 6, 2026.</p>
+            </div>
+          </article>
+          <article class="release-card punjabi">
+            <img class="poster" src="https://static.toiimg.com/thumb/msid-130232787%2Cwidth-219%2Cheight-317%2Cquality-100%2Cimgsize-182322/pitt-siyapa.jpg" alt="Pitt Siyapa movie poster" loading="lazy">
+            <div class="release-details">
+              <span>Punjabi</span>
+              <h3>Pitt Siyapa</h3>
+              <p>Listed across 5 Regal theaters for the week of Apr 30-May 6, 2026.</p>
+            </div>
+          </article>
+          <article class="release-card marathi">
+            <img class="poster" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Raja_Shivaji_film.jpg/250px-Raja_Shivaji_film.jpg" alt="Raja Shivaji movie poster" loading="lazy">
+            <div class="release-details">
+              <span>Marathi</span>
+              <h3>Raja Shivaji</h3>
+              <p>Listed across 26 Regal theaters for the week of Apr 30-May 6, 2026.</p>
+            </div>
+          </article>
+        </div>
+        <p class="source-note">
+          Release list last checked May 6, 2026. Theater counts can change as Regal locations update schedules.
+        </p>
+      </section>
+
+      <section class="community-section reveal-on-scroll" id="community">
+        <div class="section-copy">
+          <p class="eyebrow">Movie community</p>
+          <h2>More than ticket requests.</h2>
+          <p>
+            CineBuddy can also be the place customers follow for new releases, movie updates, reviews, ratings, box office
+            notes, and limited ticket deals across Instagram and WhatsApp.
+          </p>
+          <div class="social-actions">
+            <a class="button instagram" href="https://www.instagram.com/cinebuddy_usa/" target="_blank" rel="noreferrer">Follow on Instagram</a>
+            <a class="button whatsapp-small" href="https://chat.whatsapp.com/EEkLIBpUuTt5wDwOXZEiVD?mode=ac_t" target="_blank" rel="noreferrer">Join on WhatsApp</a>
+          </div>
+        </div>
+        <div class="community-grid">
+          <a class="community-tile" href="#updates-new-releases">
+            <span aria-hidden="true">🎬</span>
+            <strong>New releases</strong>
+            <small>Fresh Indian movies now showing</small>
+          </a>
+          <a class="community-tile" href="#updates-reviews">
+            <span aria-hidden="true">⭐</span>
+            <strong>Reviews & ratings</strong>
+            <small>Quick picks before you book</small>
+          </a>
+          <a class="community-tile" href="#updates-box-office">
+            <span aria-hidden="true">📈</span>
+            <strong>Box office updates</strong>
+            <small>Trending movies and buzz</small>
+          </a>
+          <a class="community-tile" href="#updates-ticket-deals">
+            <span aria-hidden="true">🎟️</span>
+            <strong>Ticket deals</strong>
+            <small>Discount alerts for followers</small>
+          </a>
+        </div>
+      </section>
+
+      <section class="updates-hub reveal-on-scroll" aria-labelledby="updates-title">
+        <div class="section-copy">
+          <p class="eyebrow">CineBuddy updates</p>
+          <h2 id="updates-title">Follow the movies before booking the tickets.</h2>
+        </div>
+        <div class="updates-grid">
+          <article id="updates-new-releases">
+            <span aria-hidden="true">🎬</span>
+            <h3>New releases</h3>
+            <p>Find Indian movies currently playing at Regal, then send CineBuddy the movie, theater, and showtime.</p>
+            <a href="#indian-releases">See current releases</a>
+          </article>
+          <article id="updates-reviews">
+            <span aria-hidden="true">⭐</span>
+            <h3>Reviews & ratings</h3>
+            <p>Use CineBuddy posts to compare hype, audience reactions, and quick watch recommendations before your plan.</p>
+            <a href="https://www.instagram.com/cinebuddy_usa/" target="_blank" rel="noreferrer">Open Instagram</a>
+          </article>
+          <article id="updates-box-office">
+            <span aria-hidden="true">📈</span>
+            <h3>Box office updates</h3>
+            <p>Track which movies are pulling crowds, building buzz, and becoming weekend theater picks.</p>
+            <a href="https://chat.whatsapp.com/EEkLIBpUuTt5wDwOXZEiVD?mode=ac_t" target="_blank" rel="noreferrer">Join updates group</a>
+          </article>
+          <article id="updates-ticket-deals">
+            <span aria-hidden="true">🎟️</span>
+            <h3>Ticket deals</h3>
+            <p>Request a discount check for your Regal showtime and get the final CineBuddy price before booking.</p>
+            <a href="#request">Request tickets</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="feedback-section reveal-on-scroll" id="feedback" aria-labelledby="feedback-title">
+        <div class="section-copy">
+          <p class="eyebrow">Customer feedback</p>
+          <h2 id="feedback-title">Movie plans that feel easier.</h2>
+          <p>
+            Add real customer reviews here as CineBuddy grows. These sample cards show how the section will look with
+            quick community-style feedback.
+          </p>
+        </div>
+        <div class="feedback-stage">
+          <div class="feedback-track" aria-live="polite">
+            <article class="feedback-card is-active">
+              <span aria-hidden="true">🍿</span>
+              <p>“CineBuddy made the price clear before booking. I just sent the Regal showtime and got the details back.”</p>
+              <strong>Weekend movie fan</strong>
+            </article>
+            <article class="feedback-card">
+              <span aria-hidden="true">🎬</span>
+              <p>“The WhatsApp flow is easy. I can ask about a movie deal without searching through checkout screens.”</p>
+              <strong>Regal customer</strong>
+            </article>
+            <article class="feedback-card">
+              <span aria-hidden="true">⭐</span>
+              <p>“The updates group helps me see what Indian movies are playing before I plan with friends.”</p>
+              <strong>CineBuddy follower</strong>
+            </article>
+          </div>
+          <div class="feedback-controls" aria-label="Feedback carousel controls">
+            <button type="button" data-feedback="prev" aria-label="Previous feedback">‹</button>
+            <button type="button" data-feedback="next" aria-label="Next feedback">›</button>
+          </div>
+          <div class="feedback-progress" aria-hidden="true">
+            <span></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <strong>CineBuddy USA</strong>
+      <span>Discounted Regal movie ticket assistance for U.S. movie lovers.</span>
+      <a href="https://www.instagram.com/cinebuddy_usa/" target="_blank" rel="noreferrer">Instagram</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
