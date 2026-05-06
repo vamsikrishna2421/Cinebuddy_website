@@ -1,9 +1,13 @@
 const requestForm = document.querySelector("#request");
 const quickWhatsApp = document.querySelector("#quickWhatsApp");
+const movieInput = document.querySelector("#movieInput");
+const showtimeMovieName = document.querySelector("#showtimeMovieName");
 const cineBuddyWhatsApp = "17743141427";
 const feedbackCards = [...document.querySelectorAll(".feedback-card")];
 const feedbackProgress = document.querySelector(".feedback-progress");
 const counterEls = [...document.querySelectorAll("[data-count-to]")];
+const showtimeFrame = document.querySelector("#showtimeFrame");
+const activeTheatreName = document.querySelector("#activeTheatreName");
 let feedbackIndex = 0;
 let feedbackTimer;
 const feedbackDuration = 5200;
@@ -42,6 +46,40 @@ requestForm?.addEventListener("submit", (event) => {
 
 quickWhatsApp?.addEventListener("click", () => {
   quickWhatsApp.blur();
+});
+
+const useMovieName = (movieName) => {
+  const cleanName = movieName?.trim();
+  if (!cleanName || !movieInput) {
+    return;
+  }
+
+  movieInput.value = cleanName;
+  requestForm?.scrollIntoView({ behavior: "smooth", block: "center" });
+  movieInput.focus({ preventScroll: true });
+};
+
+document.querySelector(".movie-name-helper")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  useMovieName(showtimeMovieName?.value);
+});
+
+document.querySelectorAll("[data-theatre-url]").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll("[data-theatre-url]").forEach((tab) => {
+      tab.classList.toggle("is-active", tab === button);
+    });
+
+    const theatreUrl = button.dataset.theatreUrl;
+    const theatreName = button.dataset.theatreName;
+    if (showtimeFrame && theatreUrl) {
+      showtimeFrame.src = theatreUrl;
+      showtimeFrame.title = `CinemaClock showtimes for ${theatreName}`;
+    }
+    if (activeTheatreName && theatreName) {
+      activeTheatreName.textContent = theatreName;
+    }
+  });
 });
 
 const restartProgress = () => {

@@ -26,6 +26,7 @@
       </a>
       <nav>
         <a href="#how-it-works">How it works</a>
+        <a href="#showtime-explorer">Showtimes</a>
         <a href="#deals">Deals</a>
         <a href="#indian-releases">Indian releases</a>
         <a href="#community">Community</a>
@@ -64,7 +65,7 @@
             </div>
             <label>
               Movie
-              <input name="movie" type="text" placeholder="Movie name" required>
+              <input id="movieInput" name="movie" type="text" placeholder="Movie name" required>
             </label>
             <label>
               Regal theater
@@ -87,7 +88,7 @@
               </label>
               <label>
                 Contact
-                <input name="contact" type="text" placeholder="Phone or email" required>
+                <input name="contact" type="tel" placeholder="Phone number" required>
               </label>
             </div>
             <label>
@@ -95,6 +96,7 @@
               <textarea name="notes" rows="3" placeholder="Seat preference, format, or anything important"></textarea>
             </label>
             <button class="button submit" type="submit">Send request by WhatsApp</button>
+            <a class="showtime-help-link" href="#showtime-explorer">Need help to check showtimes?</a>
             <p class="form-note">Requests are manually reviewed before final price confirmation.</p>
           </form>
         </div>
@@ -136,6 +138,62 @@
         </div>
       </section>
 
+      <section class="showtime-section reveal-on-scroll" id="showtime-explorer" aria-labelledby="showtime-title">
+        <div class="section-copy">
+          <p class="eyebrow">Showtime explorer</p>
+          <h2 id="showtime-title">Check movies for common CineBuddy Regal theatres.</h2>
+          <p>
+            Select a theatre below to view available movies and showtimes through CinemaClock inside this page. After
+            choosing a show, send the request form with the movie, date, time, and ticket count.
+          </p>
+        </div>
+
+        <div class="showtime-layout">
+          <aside class="showtime-tabs" aria-label="Common Regal theatres">
+            <button class="is-active" type="button" data-theatre-url="https://www.cinemaclock.com/movie-theaters/regal-solomon-pond" data-theatre-name="Regal Solomon Pond">Solomon Pond</button>
+            <button type="button" data-theatre-url="https://www.cinemaclock.com/movie-theaters/regal-coldwater-crossing" data-theatre-name="Regal Coldwater Crossing">Coldwater Crossing</button>
+            <button type="button" data-theatre-url="https://www.cinemaclock.com/movie-theaters/regal-greenwood-rpx" data-theatre-name="Regal Greenwood RPX">Greenwood</button>
+            <button type="button" data-theatre-url="https://www.cinemaclock.com/movie-theaters/regal-village-park" data-theatre-name="Regal Village Park">Village Park</button>
+            <button type="button" data-theatre-url="https://www.cinemaclock.com/movie-theaters/regal-ua-galaxy-indianapolis" data-theatre-name="Regal UA Galaxy Indianapolis">UA Galaxy</button>
+            <button type="button" data-theatre-url="https://www.cinemaclock.com/movie-theaters/regal-shiloh-crossing" data-theatre-name="Regal Shiloh Crossing">Shiloh Crossing</button>
+            <button type="button" data-theatre-url="https://www.cinemaclock.com/movie-theaters/regal-huebner-oaks-rpx" data-theatre-name="Regal Huebner Oaks RPX">San Antonio</button>
+            <button type="button" data-theatre-url="https://www.cinemaclock.com/movie-theaters/regal-fox-imax" data-theatre-name="Regal Fox IMAX">Regal Fox</button>
+            <button type="button" data-theatre-url="https://www.cinemaclock.com/movie-theaters/regal-starlight-charlotte" data-theatre-name="Regal Starlight Charlotte">Starlight Charlotte</button>
+          </aside>
+
+          <div class="showtime-preview-column">
+            <div class="movie-helper" aria-label="Movie helper">
+              <form class="movie-name-helper">
+                <label for="showtimeMovieName">Movie name</label>
+                <div>
+                  <input id="showtimeMovieName" type="text" placeholder="Type movie name">
+                  <button type="submit">Use this movie</button>
+                </div>
+              </form>
+              <p class="showtime-note">
+                Use the phone preview to confirm the exact date and showtime, then submit the CineBuddy request form.
+              </p>
+            </div>
+
+            <div class="phone-preview" aria-label="Mobile preview of theatre showtimes">
+              <div class="phone-speaker" aria-hidden="true"></div>
+              <div class="showtime-frame-shell">
+                <div class="showtime-frame-heading">
+                  <strong id="activeTheatreName">Regal Solomon Pond</strong>
+                  <span>12h = AM/PM times</span>
+                </div>
+                <iframe
+                  id="showtimeFrame"
+                  title="CinemaClock showtimes for Regal Solomon Pond"
+                  src="https://www.cinemaclock.com/movie-theaters/regal-solomon-pond"
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="content-section reveal-on-scroll" id="how-it-works">
         <div class="section-copy">
           <p class="eyebrow">Simple process</p>
@@ -172,31 +230,32 @@
         <div class="pricing-example">
           <p>
             CineBuddy looks at the final ticket price shown at checkout, including booking fees and taxes. The discounted
-            price is usually calculated as half of that final amount, then rounded up to the nearest dollar.
+            price is usually calculated as half of that final amount, then rounded to the nearest dollar. Half-dollar
+            values round up.
           </p>
           <div class="price-examples" aria-label="Example CineBuddy ticket pricing">
             <article class="price-card featured-price">
               <span>Example</span>
               <div class="sale-price">
                 <del>$18.56</del>
-                <strong>$10</strong>
+                <strong>$9</strong>
               </div>
-              <p>$18.56 ÷ 2 = $9.28, then rounded up to <b>$10</b>.</p>
+              <p>$18.56 ÷ 2 = $9.28, then rounded to <b>$9</b>.</p>
             </article>
             <article class="mini-price-card">
               <del>$15.20</del>
               <strong>$8</strong>
-              <p>$15.20 ÷ 2 = $7.60, rounded up.</p>
+              <p>$15.20 ÷ 2 = $7.60, rounded to nearest dollar.</p>
             </article>
             <article class="mini-price-card">
               <del>$21.40</del>
               <strong>$11</strong>
-              <p>$21.40 ÷ 2 = $10.70, rounded up.</p>
+              <p>$21.40 ÷ 2 = $10.70, rounded to nearest dollar.</p>
             </article>
             <article class="mini-price-card">
               <del>$24.99</del>
               <strong>$13</strong>
-              <p>$24.99 ÷ 2 = $12.50, rounded up.</p>
+              <p>$24.99 ÷ 2 = $12.50, half-dollar rounds up.</p>
             </article>
           </div>
         </div>
